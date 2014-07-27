@@ -40,9 +40,10 @@ cacheSolve <- function(x, ...) {
     inv
 }
 
-## Test 
-x <- matrix(c(4,5,4,7,8,6,9,4,7),3,3)
+## Testing the R code for caching 
+x <- matrix(c(2,5,4,7,8,6,5,4,7),3,3)
 det(x)
 z1 <- cacheSolve(makeCacheMatrix(x))
 z2 <- solve(x)
 z1==z2
+## z1 == z2 indicates cache solver is working
